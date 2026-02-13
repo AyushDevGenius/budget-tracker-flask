@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="card">
+        <h2>Add Income or Expense</h2>
+        <p>Please fill the details below</p>
+
+        <form method="POST">
+
+            <label>Amount</label>
+            <input type="number" name="amount" placeholder="Enter amount" required>
+
+            <label>Category</label>
+            <input type="text" name="category" placeholder="Food, Rent, Travel" >
+
+            <label>Type</label>
+            <select name="type" required>
+                <option value="">-- Select Type --</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <label>Month</label>
+            <input type="text" name="month" placeholder="YYYY-MM (e.g. 2026-01)" required>
+
+            <button type="submit">Add Entry</button>
+
+        </form>
+
+        <a href="/">Back to Home</a>
+    </div>
+
+</body>
+</html>
